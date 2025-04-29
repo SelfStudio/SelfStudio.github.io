@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <title>SelfStudio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">SelfStudio</h1>
+      <nav>
+      </nav>
+      <button class="menu-toggle">☰</button>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div id="particles-js"></div>
+    <div class="container hero-content">
+      
+      <p>Software Developer &amp; Designer</p>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2>关于我</h2>
+      <p>你好，我是SelfStudio，热衷于创造酷炫、高质量的软件作品，涵盖前端、后端与移动端开发。</p>
+    </div>
+  </section>
+
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2>技能</h2>
+      <div class="skill-list">
+        <div class="skill-item">
+          <h3>JavaScript</h3>
+          <div class="skill-bar"><div class="skill-level" style="--w:90%;"></div></div>
+        </div>
+        <div class="skill-item">
+          <h3>Python</h3>
+          <div class="skill-bar"><div class="skill-level" style="--w:80%;"></div></div>
+        </div>
+        <div class="skill-item">
+          <h3>CSS &amp; HTML</h3>
+          <div class="skill-bar"><div class="skill-level" style="--w:85%;"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="projects">
+    <div class="container">
+      <h2>作品集</h2>
+      <div class="project-list">
+        <div class="project-item">
+          <img src="https://source.unsplash.com/300x200/?app,code" alt="项目1">
+          <div class="overlay">
+            <h3>在线商城平台</h3>
+            <p>基于 React 和 Node.js 的电商解决方案。</p>
+          </div>
+        </div>
+        <div class="project-item">
+          <img src="https://source.unsplash.com/300x200/?mobile,app" alt="项目2">
+          <div class="overlay">
+            <h3>移动社交应用</h3>
+            <p>使用 Flutter 开发的高性能社交客户端。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>联系我们</h2>
+      <form action="mailto:contact@selfstudio.fun" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="您的姓名" required>
+        <input type="email" name="email" placeholder="您的邮箱" required>
+        <textarea name="message" rows="5" placeholder="您的信息" required></textarea>
+        <button type="submit">发送</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 SelfStudio.fun. 版权所有。</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('nav ul');
+    toggle.addEventListener('click', () => navList.classList.toggle('active'));
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script>
+  particlesJS('particles-js', {
+    fps_limit: 60,
+    interactivity: {
+      detect_on: 'canvas',
+      events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'repulse' } },
+      modes: { grab: { distance: 200, line_linked: { opacity: 0.7 } }, repulse: { distance: 100 } }
+    },
+    particles: {
+      number: { value: 100, density: { enable: true, value_area: 800 } },
+      color: { value: '#00ffff' },
+      shape: { type: 'circle', stroke: { width: 0, color: '#00ffff' } },
+      opacity: { value: 0.8, random: true },
+      size: { value: 3, random: true },
+      line_linked: { enable: true, distance: 150, color: '#00ffff', opacity: 0.5, width: 1 },
+      move: { enable: true, speed: 2, direction: 'none', random: false, straight: false, out_mode: 'bounce', bounce: true }
+    },
+    retina_detect: true
+  });
+  </script>
+</body>
+</html>
